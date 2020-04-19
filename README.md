@@ -101,8 +101,8 @@ int det_re(int** M, int n)
         p[i] = (int*)malloc(len * sizeof(int));
     for (k = 0; k < n; k++)
     {
-		if (M[0][k] == 0)	// 如果为0,就没必要继续往下算了，这就是减少时间复杂度的关键
-			continue;
+	if (M[0][k] == 0)	// 如果为0,就没必要继续往下算了，这就是减少时间复杂度的关键
+		continue;
         for (i = 0; i < len; i++) {
             for (j = 0; j < len; j++)
             {
@@ -179,7 +179,7 @@ int  sort_row_by_zero(int **M, int n)
 	free(zero_array);
 
 	int** M2 = (int**)malloc(n * sizeof(int *));
-    for (i = 0; i < n; ++i)
+    	for (i = 0; i < n; ++i)
 		M2[i] = (int*)malloc(n * sizeof(int));
 
 	for (i = 0; i < n; ++i){
@@ -212,15 +212,15 @@ int sort_index(int* array, int n, int* index)
         for(j = 0; j < n - 1 -i; j++)
             if(array[j] < array[j+1])
             {
-				temp1 = array[j];
-				array[j] = array[j+1];
-				array[j+1] = temp1;
+		temp1 = array[j];
+		array[j] = array[j+1];
+		array[j+1] = temp1;
 
                 temp2 = index[j];
                 index[j] = index[j+1];
                 index[j+1] = temp2;
 
-				count++;
+		count++;
             }
 	}
 

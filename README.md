@@ -42,7 +42,7 @@ gcc decrypt.c det.c -o decrypt
 4. 加密明文，指定阶数为32，读取文件plain.txt, 32keyA.txt, 32keyB.txt，将密文写入文件cipher.txt  
 `./encrypt -c 32 -i plain.txt 32keyA.txt 32keyB.txt -o cipher.txt`  
 5. 生成逆矩阵A_1，指定阶数为32，读取文件32keyA.txt，写入文件32keyA_1.txt，行列式可在标准输出查看  
-`./inverseA -c 16 -i 32keyA.txt -o 32keyA_1.txt`  
+`./inverseA -c 32 -i 32keyA.txt -o 32keyA_1.txt`  
 6. 解密密文，指定阶数为32，读取文件cipher.txt, 32keyA_1.txt, 32keyB.txt，将结果写入文件output.txt  
 `./decrypt -c 32 -i cipher.txt 32keyA_1.txt 32keyB.txt -o output.txt`  
 
